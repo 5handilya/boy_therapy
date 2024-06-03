@@ -17,10 +17,10 @@ bool fileExists(const std::string&filename) {
 
 void writeLog(string whatsup, string whatdo){
     std::time_t now = std::time(nullptr);
-    std::tm* localTime = std::localtime(&now); // Convert to local time
+    std::tm* localTime = std::localtime(&now); 
     stringstream filename;
     filename << put_time(localTime, "%d-%m-%y-%H-%M-%S") << ".txt";
-    ofstream outfile(filename.str()); // Use the generated filename
+    ofstream outfile(filename.str());
     outfile << "whats up: " << whatsup << endl;
     outfile << "what to do: " << whatdo << endl;
     outfile.close();
@@ -40,7 +40,7 @@ int main(){
             return 1;
         }
         string repeatedX;
-        repeatedX.reserve(x.size() * n); // Preallocate for efficiency
+        repeatedX.reserve(x.size() * n); 
         for (int i = 0; i < n; ++i) {
             repeatedX += x;
         }
