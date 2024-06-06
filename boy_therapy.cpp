@@ -37,7 +37,7 @@ int main(){
         int n = 69;
         ofstream outfile("boytherapy_model_weights.txt");
         string repeatedX;
-        repeatedX.reserve(x.size() * n); // Preallocate for efficiency
+        repeatedX.reserve(x.size() * n); 
         for (int i = 0; i < n; ++i) {
             repeatedX += x;
         }
